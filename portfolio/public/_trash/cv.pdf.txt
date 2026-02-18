@@ -1,0 +1,50 @@
+# CV Placeholder
+
+This is a placeholder for the actual CV PDF file.
+
+## To Replace:
+
+1. Create your CV as a PDF file
+2. Name it `cv.pdf`
+3. Place it in the `public/` directory
+4. Delete this `cv.pdf.txt` file
+
+## CV Best Practices:
+
+- **File size**: Keep under 2MB
+- **Format**: PDF only (ensures consistent viewing)
+- **Filename**: Use `cv.pdf` or `stepan-prokop-cv.pdf`
+- **Content**: Include:
+  - Contact information
+  - Professional summary
+  - Work experience
+  - Education
+  - Skills
+  - Portfolio link (stepanprokop.com)
+  
+## Privacy Note:
+
+Remember to remove sensitive information like:
+- Full address (city is enough)
+- Personal ID numbers
+- Detailed financial information
+
+## Accessibility:
+
+Ensure your PDF is:
+- Tagged for screen readers
+- Has selectable text (not just images)
+- Uses readable fonts (11pt minimum)
+- Has good color contrast
+
+## Alternative Option:
+
+Instead of a downloadable PDF, you could link to:
+- LinkedIn profile
+- Online resume (read.cv, notion.so)
+- Dynamic resume page on your site
+
+Update the Footer component if you choose this approach.
+
+
+

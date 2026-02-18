@@ -1,0 +1,643 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@wooorm/starry-night/style/core";
+@import "../styles/tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-background-primary: var(--theme-background-primary);
+  --color-avatar-outline: var(--theme-avatar-outline);
+  --color-surface-fill: var(--theme-surface-fill);
+  --color-surface-stroke: var(--theme-surface-stroke);
+  --color-button-fill: var(--theme-button-fill);
+  --color-button-fill-hover: var(--theme-button-fill-hover);
+  --color-button-fill-pressed: var(--theme-button-fill-pressed);
+  --color-button-border: var(--theme-button-border);
+  --color-button-border-focus: var(--theme-button-border-focus);
+  --color-button-content: var(--theme-button-content);
+  --color-button-shadow: var(--theme-button-shadow);
+  --color-button-outline-fill-hover: var(--theme-button-outline-fill-hover);
+  --color-button-outline-fill-pressed: var(--theme-button-outline-fill-pressed);
+  --color-button-outline-border: var(--theme-button-outline-border);
+  --color-button-outline-border-focus: var(--theme-button-outline-border-focus);
+  --color-button-outline-content: var(--theme-button-outline-content);
+  --color-button-outline-shadow: var(--theme-button-outline-shadow);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-l: 6px;
+  --radius-xxl: 16px;
+
+  /* Narrow Grid System: 12 columns × 39px + 11 gaps × 16px = 644px */
+  /* Updated to match Figma spec: 692px max-width */
+  --max-width-narrow: 692px;
+  --grid-columns: 12;
+  --grid-column-width: 39px;
+  --grid-gutter: 16px;
+
+  /* Typography Scale - Figma Design Tokens */
+  --font-size-headline-1: 24px;
+  --font-size-headline-2: 18px;
+  --font-size-headline-3: 16px;
+  --font-size-body-1: 18px;
+  --font-size-body-2: 16px;
+  --font-size-body-3: 14px;
+  --font-size-body-4: 12px;
+  --line-height-headline-1: 28px;
+  --line-height-headline-2: 24px;
+  --line-height-headline-3: 24px;
+  --line-height-body-1: 24px;
+  --line-height-body-2: 24px;
+  --line-height-body-3: 18px;
+  --line-height-body-4: 24px;
+  --letter-spacing: -0.01em;
+
+  /* Spacing Scale - Figma Design Tokens */
+  --spacing-xs: 6px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 18px;
+  --spacing-xl: 24px;
+}
+
+:root {
+  /* Figma base color tokens (00--color-tokens) */
+  --color-1: #f5f5f5;
+  --color-1_trans-10: rgba(245, 245, 245, 0.05);
+  --color-2: #e6e6e6;
+  --color-3: #d4d4d4;
+  --color-4: #d1d1d1;
+  --color-5: #b8b8b8;
+  --color-6: #8f8f8f;
+  --color-7: #6b6b6b;
+  --color-8: #4d4d4d;
+  --color-9: #2a2a2a;
+  --color-10_trans-10: rgba(42, 42, 42, 0.05);
+
+  --radius: 0.625rem;
+  
+  /* Semantic tokens – day mode (01--comp-colors → day_mode) */
+  --theme-text-primary: var(--color-8);
+  --theme-text-secondary: var(--color-7);
+  --theme-background-primary: var(--color-1);
+  --theme-avatar-outline: var(--color-9);
+  --theme-surface-fill: var(--color-2);
+  --theme-surface-stroke: var(--color-4);
+  --theme-button-fill: var(--color-1);
+  --theme-button-fill-hover: var(--color-2);
+  --theme-button-fill-pressed: var(--color-3);
+  --theme-button-border: var(--color-2);
+  --theme-button-border-focus: var(--color-6);
+  --theme-button-content: var(--color-9);
+  --theme-button-shadow: var(--color-10_trans-10);
+  --theme-button-outline-fill-hover: var(--color-2);
+  --theme-button-outline-fill-pressed: var(--color-3);
+  --theme-button-outline-border: var(--color-3);
+  --theme-button-outline-border-focus: var(--color-6);
+  --theme-button-outline-content: var(--color-9);
+  --theme-button-outline-shadow: var(--color-10_trans-10);
+
+  /* Legacy theme variables mapped to semantic tokens */
+  --background: var(--theme-background-primary);
+  --foreground: var(--theme-text-primary);
+  --card: var(--theme-surface-fill);
+  --card-foreground: var(--theme-text-primary);
+  --popover: var(--theme-surface-fill);
+  --popover-foreground: var(--theme-text-primary);
+  --primary: var(--theme-button-fill);
+  --primary-foreground: var(--theme-button-content);
+  --secondary: var(--theme-surface-fill);
+  --secondary-foreground: var(--theme-text-secondary);
+  --muted: var(--theme-surface-fill);
+  --muted-foreground: var(--theme-text-secondary);
+  --accent: var(--theme-button-fill-hover);
+  --accent-foreground: var(--theme-button-content);
+  --destructive: var(--theme-button-content);
+  --destructive-foreground: var(--theme-button-fill);
+  --border: var(--theme-surface-stroke);
+  --input: var(--theme-surface-stroke);
+  --ring: var(--theme-button-border-focus);
+  --chart-1: var(--color-3);
+  --chart-2: var(--color-4);
+  --chart-3: var(--color-5);
+  --chart-4: var(--color-6);
+  --chart-5: var(--color-7);
+  --sidebar: var(--theme-surface-fill);
+  --sidebar-foreground: var(--theme-text-primary);
+  --sidebar-primary: var(--theme-button-content);
+  --sidebar-primary-foreground: var(--theme-button-fill);
+  --sidebar-accent: var(--theme-button-fill-hover);
+  --sidebar-accent-foreground: var(--theme-button-content);
+  --sidebar-border: var(--theme-surface-stroke);
+  --sidebar-ring: var(--theme-button-border-focus);
+
+  /* Syntax highlighting palette (light) */
+  --color-prettylights-syntax-brackethighlighter-angle: #59636e;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-comment: #59636e;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+  --color-prettylights-syntax-entity: #6639ba;
+  --color-prettylights-syntax-entity-tag: #0550ae;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-markup-ignored-text: #d1d9e0;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #1f2328;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-markup-bold: #1f2328;
+  --color-prettylights-syntax-markup-italic: #1f2328;
+}
+
+.dark {
+  /* Semantic tokens – night mode (01--comp-colors → night_mode) */
+  --theme-text-primary: var(--color-2);
+  --theme-text-secondary: var(--color-3);
+  --theme-background-primary: var(--color-9);
+  --theme-avatar-outline: var(--color-1);
+  --theme-surface-fill: var(--color-8);
+  --theme-surface-stroke: var(--color-7);
+  --theme-button-fill: var(--color-9);
+  --theme-button-fill-hover: var(--color-8);
+  --theme-button-fill-pressed: var(--color-7);
+  --theme-button-border: var(--color-8);
+  --theme-button-border-focus: var(--color-4);
+  --theme-button-content: var(--color-1);
+  --theme-button-shadow: var(--color-10_trans-10);
+  --theme-button-outline-fill-hover: var(--color-8);
+  --theme-button-outline-fill-pressed: var(--color-7);
+  --theme-button-outline-border: var(--color-7);
+  --theme-button-outline-border-focus: var(--color-4);
+  --theme-button-outline-content: var(--color-1);
+  --theme-button-outline-shadow: var(--color-10_trans-10);
+
+  /* Legacy theme variables mapped to semantic tokens */
+  --background: var(--theme-background-primary);
+  --foreground: var(--theme-text-primary);
+  --card: var(--theme-surface-fill);
+  --card-foreground: var(--theme-text-primary);
+  --popover: var(--theme-surface-fill);
+  --popover-foreground: var(--theme-text-primary);
+  --primary: var(--theme-button-fill);
+  --primary-foreground: var(--theme-button-content);
+  --secondary: var(--theme-surface-fill);
+  --secondary-foreground: var(--theme-text-secondary);
+  --muted: var(--theme-surface-fill);
+  --muted-foreground: var(--theme-text-secondary);
+  --accent: var(--theme-button-fill-hover);
+  --accent-foreground: var(--theme-button-content);
+  --destructive: var(--theme-button-content);
+  --destructive-foreground: var(--theme-button-fill);
+  --border: var(--theme-surface-stroke);
+  --input: var(--theme-surface-stroke);
+  --ring: var(--theme-button-border-focus);
+  --chart-1: var(--color-7);
+  --chart-2: var(--color-6);
+  --chart-3: var(--color-5);
+  --chart-4: var(--color-4);
+  --chart-5: var(--color-3);
+  --sidebar: var(--theme-surface-fill);
+  --sidebar-foreground: var(--theme-text-primary);
+  --sidebar-primary: var(--theme-button-content);
+  --sidebar-primary-foreground: var(--theme-button-fill);
+  --sidebar-accent: var(--theme-button-fill-hover);
+  --sidebar-accent-foreground: var(--theme-button-content);
+  --sidebar-border: var(--theme-surface-stroke);
+  --sidebar-ring: var(--theme-button-border-focus);
+
+  /* Syntax highlighting palette (dark) */
+  --color-prettylights-syntax-brackethighlighter-angle: #9198a1;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-comment: #9198a1;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-markup-bold: #f0f6fc;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-markup-ignored-text: #f0f6fc;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-italic: #f0f6fc;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #f0f6fc;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
+  --color-prettylights-syntax-variable: #ffa657;
+}
+
+/* Theme transition — only active during the toggle, removed afterwards so hover transitions work normally */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer utilities {
+  /* Narrow Grid Container */
+  .container-narrow {
+    max-width: var(--max-width-narrow);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid-gutter);
+    padding-right: var(--grid-gutter);
+  }
+
+  /* Grid with 12 columns and 16px gaps */
+  .grid-narrow {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--grid-gutter);
+  }
+
+  /* Responsive breakpoints for narrow grid */
+  @media (max-width: 767px) {
+    .container-narrow {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Typography utilities */
+  .text-headline-1 {
+    font-size: var(--font-size-headline-1);
+    line-height: var(--line-height-headline-1);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-headline-2 {
+    font-size: var(--font-size-headline-2);
+    line-height: var(--line-height-headline-2);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-headline-3 {
+    font-size: var(--font-size-headline-3);
+    line-height: var(--line-height-headline-3);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-body-1 {
+    font-size: var(--font-size-body-1);
+    line-height: var(--line-height-body-1);
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-body-2 {
+    font-size: var(--font-size-body-2);
+    line-height: var(--line-height-body-2);
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-body-3 {
+    font-size: var(--font-size-body-3);
+    line-height: var(--line-height-body-3);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-body-4 {
+    font-size: var(--font-size-body-4);
+    line-height: var(--line-height-body-4);
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  .text-body-code-4 {
+    font-size: var(--font-size-body-4);
+    line-height: var(--line-height-body-4);
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing);
+    font-family: var(--font-mono);
+  }
+}
+
+/* Mobile typography adjustments */
+@media (max-width: 767px) {
+  @theme inline {
+    --font-size-headline-1: 20px;
+    --font-size-headline-2: 16px;
+    --spacing-xl: 16px;
+  }
+}
+
+/* ============================================
+   View Transitions API Styles
+   ============================================ */
+
+/* Enable view transitions for supported browsers */
+@supports (view-transition-name: none) {
+  /* Main content crossfade transition */
+  main {
+    view-transition-name: main-content;
+  }
+
+  /* Smooth crossfade animation */
+  ::view-transition-old(main-content),
+  ::view-transition-new(main-content) {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Fade out old content */
+  ::view-transition-old(main-content) {
+    animation-name: fade-out;
+  }
+
+  /* Fade in new content */
+  ::view-transition-new(main-content) {
+    animation-name: fade-in;
+  }
+}
+
+/* Keyframes for fade animations */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Optional: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(main-content),
+  ::view-transition-new(main-content) {
+    animation-duration: 0.001s !important;
+  }
+}
+
+/* ============================================
+   Inline code styling
+   ============================================ */
+
+/* Inline code */
+:not(pre) > code {
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  background-color: var(--muted);
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+/* ============================================
+   rehype-starry-night Syntax Highlighting
+   ============================================ */
+
+/* Code block with syntax highlighting */
+pre[data-language] {
+  padding: 1.25rem 1rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  background-color: var(--muted) !important;
+}
+
+/* Light mode: rehype-starry-night uses light theme by default */
+pre[data-language] code {
+  font-family: var(--font-mono);
+}
+
+/* Dark mode: Switch to dark theme */
+html.dark pre[data-language] {
+  background-color: var(--muted) !important;
+}
+
+/* Inline elements inherit proper colors from theme */
+pre[data-language] span {
+  font-style: inherit;
+}
+
+/* ============================================
+   MDX Content Typography
+   Additional styles for blog post content
+   ============================================ */
+
+.mdx-content {
+  /* Ensure proper spacing and readability */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* First paragraph after heading should have no top margin */
+.mdx-content h1 + p,
+.mdx-content h2 + p,
+.mdx-content h3 + p,
+.mdx-content h4 + p,
+.mdx-content h5 + p,
+.mdx-content h6 + p {
+  margin-top: 0;
+}
+
+/* Code blocks should not have paragraph margins */
+.mdx-content pre {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Images in MDX content */
+.mdx-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Nested lists */
+.mdx-content ul ul,
+.mdx-content ul ol,
+.mdx-content ol ul,
+.mdx-content ol ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* List items */
+.mdx-content li > p {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Blockquote spacing */
+.mdx-content blockquote > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Table styling enhancements */
+.mdx-content table {
+  border-spacing: 0;
+}
+
+.mdx-content table th {
+  background-color: var(--theme-surface-fill);
+}
+
+.mdx-content table tr:last-child {
+  border-bottom: none;
+}
+
+/* Code in headings */
+.mdx-content h1 code,
+.mdx-content h2 code,
+.mdx-content h3 code,
+.mdx-content h4 code,
+.mdx-content h5 code,
+.mdx-content h6 code {
+  font-size: 0.9em;
+}
+
+/* Anchor links in headings (for accessibility) */
+.mdx-content h1:hover .anchor,
+.mdx-content h2:hover .anchor,
+.mdx-content h3:hover .anchor,
+.mdx-content h4:hover .anchor,
+.mdx-content h5:hover .anchor,
+.mdx-content h6:hover .anchor {
+  opacity: 1;
+}
+
+.mdx-content .anchor {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: var(--text-secondary);
+}
+
+/* Task lists (if using GitHub-flavored markdown) */
+.mdx-content input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.mdx-content li:has(> input[type="checkbox"]) {
+  list-style-type: none;
+  margin-left: -1.5rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .mdx-content {
+    font-size: 0.9375rem; /* 15px on mobile for better readability */
+  }
+
+  .mdx-content pre {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .mdx-content table {
+    font-size: 0.875rem;
+  }
+}

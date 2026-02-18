@@ -1,0 +1,502 @@
+{
+  "body-1": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-5}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "a96bea151cc6e7e89e18b5e9325249e72881c625"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.400}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5e5c4e7a95082d45471bec888463aacceee9b629"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "headline-2": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-5}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "a96bea151cc6e7e89e18b5e9325249e72881c625"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.400}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5e5c4e7a95082d45471bec888463aacceee9b629"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "radius": {
+    "XL": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "CORNER_RADIUS",
+            "FONT_VARIATIONS"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "L": {
+      "$type": "number",
+      "$value": "{size.size-1}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "CORNER_RADIUS",
+            "FONT_VARIATIONS"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "07a562237c25e3477a264c9ea89fc6c0b82dd71b"
+        }
+      }
+    }
+  },
+  "gap": {
+    "XL": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    }
+  },
+  "body-4": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-2}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "90e872819c60935643418e049082c6031fc5c375"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.500}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5c1b12b7cebe49c7ae73e1f6b3b69d3f772ce572"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "body-2": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.400}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5e5c4e7a95082d45471bec888463aacceee9b629"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "button": {
+    "items-gap": {
+      "$type": "number",
+      "$value": "{size.size-1}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "07a562237c25e3477a264c9ea89fc6c0b82dd71b"
+        }
+      }
+    },
+    "padding-left-right": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "padding-top-bottom": {
+      "$type": "number",
+      "$value": "{size.size-2}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "90e872819c60935643418e049082c6031fc5c375"
+        }
+      }
+    },
+    "icon-size": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "height": {
+      "$type": "number",
+      "$value": "{size.size-8}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "c9ed6e56e0c7ddcac68be3c1aa3e1cd96b034b45"
+        }
+      }
+    }
+  },
+  "spacing": {
+    "xs": {
+      "$type": "number",
+      "$value": "{size.size-1}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "07a562237c25e3477a264c9ea89fc6c0b82dd71b"
+        }
+      }
+    },
+    "sm": {
+      "$type": "number",
+      "$value": "{size.size-2}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "90e872819c60935643418e049082c6031fc5c375"
+        }
+      }
+    },
+    "md": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "lg": {
+      "$type": "number",
+      "$value": "{size.size-5}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "a96bea151cc6e7e89e18b5e9325249e72881c625"
+        }
+      }
+    },
+    "xl": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "body-3": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-3}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "69fa299374b6bb7b2fe833d2fcbb08904aefdcc3"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.600}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "a101c820c5ab5ecfbfd3629ff1265dd69c95cd8f"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-5}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "a96bea151cc6e7e89e18b5e9325249e72881c625"
+        }
+      }
+    }
+  },
+  "headline-3": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-4}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "cbac5c6dec8daa5b9594c5f5a3d8190409951daa"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.400}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5e5c4e7a95082d45471bec888463aacceee9b629"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    }
+  },
+  "headline-1": {
+    "size": {
+      "$type": "number",
+      "$value": "{size.size-6}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "3fbd2016aead70a7f8af314f1e13eb6972facf5d"
+        }
+      }
+    },
+    "weight": {
+      "$type": "number",
+      "$value": "{typography.400}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "5e5c4e7a95082d45471bec888463aacceee9b629"
+        }
+      }
+    },
+    "line height": {
+      "$type": "number",
+      "$value": "{size.size-7}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "366f7fd92df0f7644845b601f99ed52a27ed52c0"
+        }
+      }
+    }
+  }
+}

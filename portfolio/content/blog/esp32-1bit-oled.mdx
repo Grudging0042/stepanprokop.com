@@ -1,0 +1,180 @@
+---
+title: "From Figma to Firmware: A Better Way to Design for 1-Bit Displays"
+description: "I love my ESP32, but designing for 1-bit OLEDs is painful, so I built a Figma plugin to fix it."
+date: "2025-11-08"
+tags:
+  - ESP32
+  - Figma
+  - OLED
+  - DIY
+category: "Hardware"
+thumbnail: "/images/blog/esp32-1bit-oled-thumbnail.png"
+author: "Štěpán Prokop"
+published: true
+---
+
+### Why Does Hardware Design Feel So Clunky?
+
+I love the ESP32, Raspberry Pi, and all kinds of pocket-sized computers. But let's be honest: their tiny accessories, especially the displays, can't compete with your iPhone. That doesn't mean you can't create magic with them, but getting there is a painful process.
+
+My frustration always peaked when trying to make graphics for 1-bit OLED displays. My workflow was broken:
+1.  Design a cool graphic in Figma.
+2.  Export it as a PNG.
+3.  Run it through a random online converter or Python script to get a C byte array.
+4.  Paste that array into my Arduino IDE.
+5.  Compile, flash, and... it looks terrible. A mess of aliased pixels.
+
+The feedback loop was minutes long. I kept thinking, "I'm already *in* Figma. **Why can't I just see what it will look like on the display right here, in real-time?**"
+
+This post is about the solution I built: a Figma plugin that bridges the gap between vector design and pixel-perfect hardware display.
+
+### The ESP32 & the 1-Bit Challenge
+
+For those new to the game, here's a quick primer.
+
+* **ESP32 C5 Super Mini:** A family of super-popular, low-cost microcontrollers. They're tiny (about 34 × 18 mm), powerful, and come packed with Wi-Fi and Bluetooth. Perfect for DIY smart devices.
+
+The ESP32-C6 Super Mini supports Wi-Fi 6 and Bluetooth 5 LE, which makes it perfect not only for display-based projects but also for connected IoT devices.
+* **1-Bit OLED Display:** A common screen for these projects (like the popular SSD1306 or SH1106). "1-bit" means each pixel has only two states: **on** (usually white, blue, or yellow) or **off** (black).
+
+This limitation is also its charm. It's low-power, high-contrast, and has a cool retro-cyberpunk vibe. But it's a nightmare for designers. How do you represent a complex image with just two colors? The answer is **dithering**—a technique for creating the illusion of grayscale by arranging black and white pixels in specific patterns. Getting that pattern right is the whole problem.
+
+### How the Plugin Works
+
+The goal was simple: a real-time preview and a one-click export.
+
+I developed a Figma plugin that constantly watches your selected design frame.
+1.  As you design, it grabs the pixel data.
+2.  It processes that data through different dithering algorithms (like **Floyd-Steinberg**, **Bayer/Ordered**, or a simple **Threshold**).
+3.  It displays the final 1-bit result directly in the plugin window.
+
+What you see is *exactly* what you'll get on the hardware. When you're happy, you just hit "Export" and the plugin generates a clean, optimized C-style byte array (`const unsigned char...`) ready to be pasted directly into your code.
+
+
+Mini-Tutorial: From Figma to an ESP32
+
+Let's build something.
+
+#### Step 1: Get Your Gear
+For this demo, I'm using:
+* **An ESP32:** My current favorite is the tiny **ESP32-C6 Super Mini**. It's cheap ($7 on eBay), has Wi-Fi 6, Bluetooth 5, and USB-C.
+* **A 1-Bit Display:** A standard 0.96" 128x64 I2C OLED display, [buy on eBay](https://www.ebay.com/itm/136440620892).
+* **Tools:** A computer, USB-C cable, and the Arduino IDE.
+
+#### Step 2: Wire It Up
+This is the easy part. These I2C displays only need four wires.
+
+
+
+[Image of the ESP32 to OLED wiring schematic]
+
+
+* **GND** → GND
+* **VCC** → 3.3V
+* **SDA** → Your ESP32's SDA pin (check your board's pinout)
+* **SCL** → Your ESP32's SCL pin
+
+#### Step 3: The "Hello World" Code
+Before we get to Figma, let's make sure the display works. Open your Arduino IDE. You'll likely need to install the `Adafruit_GFX` and `Adafruit_SSD1306` libraries via the Library Manager.
+
+This basic code will initialize the display and show a simple message:
+
+```cpp
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+#define OLED_RESET    -1 // Reset pin # (or -1 if sharing Arduino reset pin)
+#define SCREEN_ADDRESS 0x3C
+
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+void setup() {
+  Serial.begin(115200);
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;);
+  }
+
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+  display.println(F("Display is working!"));
+  display.display();
+}
+
+void loop() {
+  // Nothing to do here
+}
+```
+Flash this to your ESP32. See the message? Great. Let's move on.
+
+#### Step 4: Design in Figma
+1.  Open Figma and **install the [Your Plugin Name Here] plugin** from the Community page.
+2.  Create a new Frame and **set its dimensions to your display's resolution** (e.g., 128x64).
+3.  Run the plugin. It will lock onto your frame.
+4.  Start designing! Import icons, draw shapes, add text. As you work, you'll see the live 1-bit preview update.
+5.  Play with the **dithering** and **threshold** settings in the plugin until your image looks crisp.
+
+#### Step 5: Export and Flash
+1.  Once you're happy, click **"Export as C Array"** in the plugin.
+2.  It will generate code like this:
+
+    ```c
+    // 'my_awesome_design', 128x64px
+    const unsigned char my_awesome_design_bitmap[] PROGMEM = {
+      0x00, 0x00, ... // lots of hex values
+    };
+    ```
+3.  Go back to your Arduino IDE. You can either paste this array directly into your `.ino` file (above `setup()`) or put it in a separate `my_image.h` file and include it.
+4.  Now, modify your `setup()` function to display this bitmap instead of the text:
+
+```cpp
+// Make sure to include your new bitmap array!
+// #include "my_image.h" // (if you used a separate file)
+
+void setup() {
+  Serial.begin(115200);
+
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;);
+  }
+
+  display.clearDisplay();
+  
+  // Draw our new bitmap!
+  // drawBitmap(x, y, bitmap_array, width, height, color)
+  display.drawBitmap(0, 0, my_awesome_design_bitmap, 128, 64, SSD1306_WHITE);
+  
+  display.display();
+}
+
+void loop() {
+  // You can even animate by exporting multiple
+  // frames and cycling through them here.
+}
+```
+Flash the code. And... **Banger.** Your beautiful, properly dithered design is now running on real hardware. Way better than a mess of text, right?
+
+
+### 5. What's Next?
+
+This project reinforced a key idea for me: design and hardware development shouldn't be separate worlds.
+
+The plugin is open-source, and I'm already thinking about what's next:
+* Support for 2-bit or 4-bit grayscale e-paper displays.
+* Animation export (generating an array of frames).
+* Adding more dithering algorithms.
+
+Design in Figma can be more than just UI—it can be firmware art.
+
+### Try it out:
+* **Get the plugin:** [Link to your Figma Plugin]
+* **Fork the code:** [Link to your GitHub Repo]
+
+Let me know what you think, and I'd love to see what you build with it!

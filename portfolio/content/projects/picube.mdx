@@ -1,0 +1,166 @@
+---
+title: "PiCube"
+description: "Designing a mobile-first investment platform that makes complex financial products accessible to first-time investors."
+client: "InvestSmart"
+year: "Jun 2023"
+role: "Senior Product Designer"
+tools:
+  - Figma
+  - Principle
+  - React Native
+  - Adobe After Effects
+industry: "Financial Services"
+featured: true
+thumbnail: "/images/projects/picube.png"
+icon: "/images/icons/icon-picube.svg"
+carousel:
+  - type: "image"
+    url: "/images/projects/picube.png"
+    alt: "PiCube app overview"
+  - type: "image"
+    url: "/images/projects/picube.png"
+    alt: "PiCube detail screen"
+  - type: "image"
+    url: "/images/projects/picube.png"
+    alt: "PiCube interaction flow"
+---
+
+## Project Overview
+
+InvestSmart wanted to democratize investing by creating a mobile app that makes financial markets accessible to millennials and Gen Z users who are intimidated by traditional investment platforms.
+
+The challenge was to simplify complex financial concepts without dumbing them down, while building trust in a highly regulated industry.
+
+## The Challenge
+
+### User Research Insights
+
+Through 24 user interviews and analytics from their beta app, we identified key pain points:
+
+- **Information overload** - Traditional platforms show too much data at once
+- **Jargon barrier** - Financial terminology intimidates new investors
+- **Decision paralysis** - Too many investment options without clear guidance
+- **Trust deficit** - Young users skeptical of financial institutions
+
+### Business Goals
+
+- Increase user acquisition by 50% in Q1
+- Achieve 70% completion rate for onboarding
+- Reduce time-to-first-investment from 7 days to under 24 hours
+- Maintain SEC compliance for all disclosures
+
+## Solution
+
+### 1. Progressive Disclosure
+
+Instead of overwhelming users with data, we implemented a layered approach:
+
+**Level 1**: Essential metrics (current value, % change, next payout)  
+**Level 2**: Detailed performance charts (tap to expand)  
+**Level 3**: Full financial reports (swipe up for modal)
+
+### 2. Plain Language + Education
+
+Every financial term has an inline explanation:
+
+```typescript
+// Example: Contextual help component
+<FinancialTerm term="P/E Ratio">
+  <TooltipContent>
+    <p>Price-to-Earnings Ratio measures how expensive a stock is</p>
+    <p>Lower = Better value, but consider the company's growth</p>
+    <Button variant="link">Learn more →</Button>
+  </TooltipContent>
+</FinancialTerm>
+```
+
+### 3. Guided Investment Journey
+
+Three-step process optimized for mobile:
+
+1. **Risk Assessment** - 5 questions with visual sliders
+2. **Portfolio Builder** - AI suggests allocation based on goals
+3. **Review & Invest** - One-tap confirmation with clear fees
+
+### 4. Trust-Building Elements
+
+- **Security badges** - Visible SSL, encryption indicators
+- **Regulatory info** - SEC disclaimers in accessible language
+- **Real-time updates** - Market data with clear timestamps
+- **Customer support** - In-app chat with 2-minute response time
+
+## Design System
+
+Created a custom design system "InvestSmart UI" with:
+
+- **50+ components** optimized for financial data display
+- **Micro-interactions** that build confidence (success animations, loading states)
+- **Data visualization** library for charts and graphs
+- **Accessibility features** including screen reader support and high contrast mode
+
+## Results
+
+After 6-month pilot with 10,000 users:
+
+- **82% onboarding completion** (target: 70%)
+- **Average time to first investment: 18 hours** (target: &lt;24h)
+- **4.7/5 app store rating** with 2,400+ reviews
+- **65% of users** made multiple investments within 30 days
+- **Zero security incidents** during pilot period
+
+### User Feedback
+
+> "Finally, an investment app that doesn't make me feel stupid. The explanations are clear without being condescending." - Sarah, 26
+
+> "I've tried 3 other apps and never followed through. This one just made sense." - Marcus, 31
+
+## Technical Implementation
+
+Built with React Native for iOS and Android, using:
+
+- **Plaid** for bank account linking
+- **TradingView** for advanced charts (optional)
+- **Twilio** for identity verification
+- **Segment** for analytics tracking
+
+Performance optimizations:
+
+- **Sub-second load times** for portfolio screens
+- **Offline mode** - View portfolio without connectivity
+- **Background sync** - Market data updates every 15 seconds
+
+## Key Learnings
+
+### 1. Trust Takes Time
+
+We tested 8 different landing screens. Users preferred seeing security credentials upfront over flashy product features.
+
+### 2. Mobile-First ≠ Mobile-Only
+
+70% of initial research happened on desktop. We added a web portal for research, but kept investing mobile-only to maintain focus.
+
+### 3. Regulation as a Feature
+
+Instead of hiding legal requirements, we made compliance visible. Users appreciated the transparency.
+
+### 4. Microinteractions Matter
+
+Small details like a satisfying "cha-ching" sound when investment completes increased repeat behavior by 23%.
+
+## What's Next
+
+Phase 2 roadmap includes:
+
+- **Social features** - Follow successful investors
+- **Educational content** - Video courses on investing basics
+- **Advanced tools** - Options trading for experienced users
+- **Crypto integration** - Bitcoin and Ethereum investments
+
+## Credits
+
+- **Product Design**: Štěpán Prokop (Lead), Alex Rivera, Jordan Lee
+- **Development**: InvestSmart Mobile Team
+- **Compliance**: Legal & Regulatory Affairs
+- **User Research**: Dr. Emily Watson
+- **Product Management**: David Kim
+

@@ -1,0 +1,203 @@
+---
+title: "Glassmorphism Card Component"
+description: "A beautiful glassmorphism card component with backdrop blur, gradient borders, and smooth hover animations."
+type: "react"
+previewType: "interactive"
+complexity: "intermediate"
+tags:
+  - UI Components
+  - React
+  - Tailwind CSS
+  - Animation
+---
+
+## Overview
+
+This glassmorphism card component creates a modern, translucent effect using CSS backdrop filters and gradient borders. It's perfect for hero sections, feature highlights, or any UI element that needs to stand out while maintaining visual hierarchy.
+
+## Features
+
+- **Backdrop blur effect** for a frosted glass appearance
+- **Gradient border animation** on hover
+- **Smooth transitions** for all interactive states
+- **Fully responsive** and accessible
+- **Dark mode support** built-in
+- **TypeScript** types included
+
+## Usage
+
+### Basic Implementation
+
+```tsx
+import { GlassCard } from "@/components/ui/glass-card";
+
+export function Example() {
+  return (
+    <GlassCard>
+      <h3>Beautiful Glassmorphism</h3>
+      <p>This card uses backdrop blur for a modern aesthetic.</p>
+    </GlassCard>
+  );
+}
+```
+
+### With Custom Props
+
+```tsx
+<GlassCard
+  variant="primary"
+  blur="lg"
+  borderGradient="purple-to-pink"
+  className="max-w-md"
+>
+  <div className="space-y-4">
+    <h3 className="text-2xl font-bold">Premium Feature</h3>
+    <p className="text-muted-foreground">
+      Enhance your UI with this eye-catching component.
+    </p>
+    <Button>Learn More</Button>
+  </div>
+</GlassCard>
+```
+
+## Component Code
+
+```tsx
+"use client";
+
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const glassCardVariants = cva(
+  "relative overflow-hidden rounded-2xl border backdrop-blur-md transition-all duration-300",
+  {
+    variants: {
+      variant: {
+        default: "bg-background/40 border-border/50",
+        primary: "bg-primary/10 border-primary/30",
+        secondary: "bg-secondary/20 border-secondary/40",
+      },
+      blur: {
+        sm: "backdrop-blur-sm",
+        md: "backdrop-blur-md",
+        lg: "backdrop-blur-lg",
+        xl: "backdrop-blur-xl",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      blur: "md",
+    },
+  }
+);
+
+export interface GlassCardProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof glassCardVariants> {
+  borderGradient?: "purple-to-pink" | "blue-to-cyan" | "orange-to-red";
+}
+
+export function GlassCard({
+  className,
+  variant,
+  blur,
+  borderGradient,
+  children,
+  ...props
+}: GlassCardProps) {
+  return (
+    <div
+      className={cn(
+        glassCardVariants({ variant, blur }),
+        "group hover:shadow-2xl hover:shadow-primary/20",
+        className
+      )}
+      {...props}
+    >
+      {/* Gradient border effect on hover */}
+      {borderGradient && (
+        <div
+          className={cn(
+            "absolute inset-0 -z-10 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100",
+            {
+              "bg-gradient-to-br from-purple-500 to-pink-500":
+                borderGradient === "purple-to-pink",
+              "bg-gradient-to-br from-blue-500 to-cyan-500":
+                borderGradient === "blue-to-cyan",
+              "bg-gradient-to-br from-orange-500 to-red-500":
+                borderGradient === "orange-to-red",
+            }
+          )}
+          style={{ filter: "blur(20px)" }}
+        />
+      )}
+
+      {/* Content */}
+      <div className="relative z-10 p-6">{children}</div>
+    </div>
+  );
+}
+```
+
+## Styling Requirements
+
+Add this to your `tailwind.config.ts` to enable backdrop blur:
+
+```typescript
+export default {
+  theme: {
+    extend: {
+      backdropBlur: {
+        xs: "2px",
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+## Browser Support
+
+This component uses `backdrop-filter` which is supported in:
+
+- ✅ Chrome 76+
+- ✅ Safari 9+ (with `-webkit-` prefix, handled by Tailwind)
+- ✅ Firefox 103+
+- ✅ Edge 79+
+
+For older browsers, the component gracefully degrades to a solid background.
+
+## Accessibility
+
+The component maintains proper contrast ratios in both light and dark modes. When using with text content:
+
+- Ensure text has sufficient contrast (WCAG AA: 4.5:1 for body text)
+- Test with dark mode enabled
+- Use semantic HTML inside the card
+- Add appropriate ARIA labels if the card is interactive
+
+## Performance Tips
+
+1. **Limit backdrop blur usage** - It's GPU-intensive, so don't overuse on pages
+2. **Use `will-change` sparingly** - Only for components that animate frequently
+3. **Test on mobile devices** - Some older devices may struggle with blur effects
+4. **Consider reduced motion** - Respect `prefers-reduced-motion` for animations
+
+## Variants
+
+### Primary (with gradient)
+
+Perfect for highlighting premium features or call-to-action sections.
+
+### Secondary
+
+Great for supporting content or less prominent cards.
+
+### Default
+
+Clean and minimal, works well for general content cards.
+
+## Credits
+
+Inspired by the glassmorphism trend popularized by Apple's iOS design language and adapted for modern web applications.

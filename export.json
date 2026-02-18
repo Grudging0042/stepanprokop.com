@@ -1,0 +1,1168 @@
+[
+  {
+    "00--color-tokens": {
+      "modes": {
+        "mode": {
+          "--color-1": {
+            "$codeSyntax": {
+              "WEB": "--color-1"
+            },
+            "$type": "color",
+            "$value": "#f5f5f5"
+          },
+          "--color-1_trans-10%": {
+            "$codeSyntax": {
+              "WEB": "--color-1"
+            },
+            "$type": "color",
+            "$value": "rgba(245, 245, 245, 0.05)"
+          },
+          "--color-2": {
+            "$codeSyntax": {
+              "WEB": "--color-2"
+            },
+            "$type": "color",
+            "$value": "#e6e6e6"
+          },
+          "--color-3": {
+            "$type": "color",
+            "$value": "#d4d4d4"
+          },
+          "--color-4": {
+            "$type": "color",
+            "$value": "#d1d1d1"
+          },
+          "--color-5": {
+            "$type": "color",
+            "$value": "#b8b8b8"
+          },
+          "--color-6": {
+            "$type": "color",
+            "$value": "#8f8f8f"
+          },
+          "--color-7": {
+            "$type": "color",
+            "$value": "#6b6b6b"
+          },
+          "--color-8": {
+            "$type": "color",
+            "$value": "#4d4d4d"
+          },
+          "--color-9": {
+            "$type": "color",
+            "$value": "#2a2a2a"
+          },
+          "--color-10_trans-10%": {
+            "$type": "color",
+            "$value": "rgba(42, 42, 42, 0.05)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "00--number-tokens": {
+      "modes": {
+        "mode": {
+          "screen": {
+            "max-w": {
+              "$scopes": [
+                "WIDTH_HEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 692
+            }
+          },
+          "size": {
+            "size-1": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 6
+            },
+            "size-2": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 12
+            },
+            "size-3": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 14
+            },
+            "size-4": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 16
+            },
+            "size-5": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 18
+            },
+            "size-6": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 24
+            },
+            "size-7": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 36
+            },
+            "size-8": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$value": 42
+            }
+          },
+          "typography": {
+            "100": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 100
+            },
+            "200": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 200
+            },
+            "300": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 300
+            },
+            "400": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 400
+            },
+            "500": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 500
+            },
+            "600": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 600
+            },
+            "700": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 700
+            },
+            "800": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 800
+            },
+            "900": {
+              "$scopes": [
+                "FONT_WEIGHT",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$value": 900
+            },
+            "body": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "string",
+              "$value": "Inter"
+            },
+            "code": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "string",
+              "$value": "Fira Code"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "01--comp-colors": {
+      "modes": {
+        "day_mode": {
+          "text": {
+            "primary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-8}"
+            },
+            "secondary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-7}"
+            }
+          },
+          "background": {
+            "primary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-1}"
+            }
+          },
+          "avatar": {
+            "outline": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-9}"
+            }
+          },
+          "component": {
+            "fill": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-2}"
+            },
+            "stroke": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-4}"
+            }
+          },
+          "button": {
+            "default": {
+              "fill": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-1}"
+              },
+              "fill-hover": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-2}"
+              },
+              "fill-pressed": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-3}"
+              },
+              "border": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-2}"
+              },
+              "border-focus": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-6}"
+              },
+              "content": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-9}"
+              },
+              "shadow": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-10_trans-10%}"
+              }
+            },
+            "outline": {
+              "fill-hover": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-2}"
+              },
+              "fill-pressed": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-3}"
+              },
+              "border": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-3}"
+              },
+              "border-focus": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-6}"
+              },
+              "content": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-9}"
+              },
+              "shadow": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-10_trans-10%}"
+              }
+            }
+          }
+        },
+        "night_mode": {
+          "text": {
+            "primary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-2}"
+            },
+            "secondary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-3}"
+            }
+          },
+          "background": {
+            "primary": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-9}"
+            }
+          },
+          "avatar": {
+            "outline": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-1}"
+            }
+          },
+          "component": {
+            "fill": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-8}"
+            },
+            "stroke": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "color",
+              "$libraryName": "",
+              "$collectionName": "00--color-tokens",
+              "$value": "{--color-7}"
+            }
+          },
+          "button": {
+            "default": {
+              "fill": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-9}"
+              },
+              "fill-hover": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-8}"
+              },
+              "fill-pressed": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-7}"
+              },
+              "border": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-8}"
+              },
+              "border-focus": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-4}"
+              },
+              "content": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-1}"
+              },
+              "shadow": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-10_trans-10%}"
+              }
+            },
+            "outline": {
+              "fill-hover": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-8}"
+              },
+              "fill-pressed": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-7}"
+              },
+              "border": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-7}"
+              },
+              "border-focus": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-4}"
+              },
+              "content": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-1}"
+              },
+              "shadow": {
+                "$scopes": [
+                  "ALL_SCOPES"
+                ],
+                "$type": "color",
+                "$libraryName": "",
+                "$collectionName": "00--color-tokens",
+                "$value": "{--color-10_trans-10%}"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "01--comp-sizes": {
+      "modes": {
+        "desktop": {
+          "headline-1": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-1": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-2": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-3": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-3}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.600}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            }
+          },
+          "body-4": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.500}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "button": {
+            "items-gap": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "padding-left-right": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "padding-top-bottom": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "icon-size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-7}"
+            }
+          },
+          "radius": {
+            "L": {
+              "$scopes": [
+                "CORNER_RADIUS",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "XL": {
+              "$scopes": [
+                "CORNER_RADIUS",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            }
+          },
+          "gap": {
+            "XL": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            }
+          },
+          "spacing": {
+            "xs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "sm": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "md": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "lg": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          }
+        },
+        "mobile": {
+          "headline-1": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-1": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-2": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "body-3": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-3}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.400}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            }
+          },
+          "body-4": {
+            "size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "weight": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{typography.500}"
+            },
+            "line height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          },
+          "button": {
+            "items-gap": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "padding-left-right": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "padding-top-bottom": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "icon-size": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "height": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-7}"
+            }
+          },
+          "radius": {
+            "L": {
+              "$scopes": [
+                "CORNER_RADIUS",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "XL": {
+              "$scopes": [
+                "CORNER_RADIUS",
+                "FONT_VARIATIONS"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            }
+          },
+          "gap": {
+            "XL": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            }
+          },
+          "spacing": {
+            "xs": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-1}"
+            },
+            "sm": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-2}"
+            },
+            "md": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-4}"
+            },
+            "lg": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-5}"
+            },
+            "xl": {
+              "$scopes": [
+                "ALL_SCOPES"
+              ],
+              "$type": "float",
+              "$libraryName": "",
+              "$collectionName": "00--number-tokens",
+              "$value": "{size.size-6}"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "99--content": {
+      "modes": {
+        "Mode 1": {}
+      }
+    }
+  }
+]

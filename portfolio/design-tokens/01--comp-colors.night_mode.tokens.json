@@ -1,0 +1,374 @@
+{
+  "background": {
+    "primary": {
+      "$type": "color",
+      "$value": "{--color-9}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "62b69eec91d97cbddfdbe596f493158b22438ad1"
+        }
+      }
+    }
+  },
+  "text": {
+    "positive": {
+      "primary": {
+        "$type": "color",
+        "$value": "{--color-2}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "0c30386a2af4ace72718c17440536e147e608626"
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{--color-3}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "cc71a366a395c6e6b91b3655cccc55c481834adb"
+          }
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{--color-4}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "2238cf350e808e83ef65b8ddaf47b97e1c4444e2"
+          }
+        }
+      }
+    },
+    "negative": {
+      "primary": {
+        "$type": "color",
+        "$value": "{--color-8}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "e071817b31eaefdda11d7f0f1bf27c76985fb84a"
+          }
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{--color-7}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "31baf3d4f7ade56b84ee146c1d5927dfb85cd8d8"
+          }
+        }
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{--color-6}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "fb1d10b63242a1c6c15a551e52e817e2fe878fd1"
+          }
+        }
+      }
+    }
+  },
+  "avatar": {
+    "outline": {
+      "$type": "color",
+      "$value": "{--color-1}",
+      "$extensions": {
+        "figma": {
+          "scopes": [
+            "ALL_SCOPES"
+          ],
+          "codeSyntax": {},
+          "hiddenFromPublishing": false,
+          "referenceKey": "b0a919d104b4213a0193aa5952d49d434eb60857"
+        }
+      }
+    }
+  },
+  "component": {
+    "positive": {
+      "fill": {
+        "$type": "color",
+        "$value": "{--color-8}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "e071817b31eaefdda11d7f0f1bf27c76985fb84a"
+          }
+        }
+      },
+      "stroke": {
+        "$type": "color",
+        "$value": "{--color-7}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "31baf3d4f7ade56b84ee146c1d5927dfb85cd8d8"
+          }
+        }
+      }
+    },
+    "negative": {
+      "fill": {
+        "$type": "color",
+        "$value": "{--color-2}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "0c30386a2af4ace72718c17440536e147e608626"
+          }
+        }
+      },
+      "stroke": {
+        "$type": "color",
+        "$value": "{--color-4}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "2238cf350e808e83ef65b8ddaf47b97e1c4444e2"
+          }
+        }
+      }
+    }
+  },
+  "button": {
+    "default": {
+      "fill": {
+        "$type": "color",
+        "$value": "{--color-9}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "62b69eec91d97cbddfdbe596f493158b22438ad1"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{--color-8}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "e071817b31eaefdda11d7f0f1bf27c76985fb84a"
+          }
+        }
+      },
+      "content": {
+        "$type": "color",
+        "$value": "{--color-1}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "b0a919d104b4213a0193aa5952d49d434eb60857"
+          }
+        }
+      },
+      "shadow": {
+        "$type": "color",
+        "$value": "{--color-10_trans-10%}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "89227441419ae153edb97caf2bccae15801ef6be"
+          }
+        }
+      },
+      "fill-hover": {
+        "$type": "color",
+        "$value": "{--color-8}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "e071817b31eaefdda11d7f0f1bf27c76985fb84a"
+          }
+        }
+      },
+      "fill-pressed": {
+        "$type": "color",
+        "$value": "{--color-7}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "31baf3d4f7ade56b84ee146c1d5927dfb85cd8d8"
+          }
+        }
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{--color-4}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "2238cf350e808e83ef65b8ddaf47b97e1c4444e2"
+          }
+        }
+      }
+    },
+    "outline": {
+      "fill-hover": {
+        "$type": "color",
+        "$value": "{--color-8}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "e071817b31eaefdda11d7f0f1bf27c76985fb84a"
+          }
+        }
+      },
+      "fill-pressed": {
+        "$type": "color",
+        "$value": "{--color-7}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "31baf3d4f7ade56b84ee146c1d5927dfb85cd8d8"
+          }
+        }
+      },
+      "border": {
+        "$type": "color",
+        "$value": "{--color-7}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "31baf3d4f7ade56b84ee146c1d5927dfb85cd8d8"
+          }
+        }
+      },
+      "border-focus": {
+        "$type": "color",
+        "$value": "{--color-4}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "2238cf350e808e83ef65b8ddaf47b97e1c4444e2"
+          }
+        }
+      },
+      "content": {
+        "$type": "color",
+        "$value": "{--color-1}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "b0a919d104b4213a0193aa5952d49d434eb60857"
+          }
+        }
+      },
+      "shadow": {
+        "$type": "color",
+        "$value": "{--color-10_trans-10%}",
+        "$extensions": {
+          "figma": {
+            "scopes": [
+              "ALL_SCOPES"
+            ],
+            "codeSyntax": {},
+            "hiddenFromPublishing": false,
+            "referenceKey": "89227441419ae153edb97caf2bccae15801ef6be"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+---
+title: "Knihobot"
+description: "A complete redesign of a leading e-commerce platform, focusing on mobile-first experience and conversion optimization."
+client: "TechStore Inc."
+year: "Oct 2025"
+role: "Lead Product Designer"
+tools:
+  - Figma
+  - Rive
+  - Framer
+  - React
+industry: "E-commerce"
+featured: true
+icon: "/images/icons/icon-knihobot.svg"
+thumbnail: "/images/projects/knihobot-thumbnail.png"
+carousel:
+  - type: "image"
+    url: "/images/projects/knihobot-thumbnail.png"
+    alt: "Knihobot app detail screen"
+  - type: "image"
+    url: "/images/projects/placeholder-phone.png"
+    alt: "Mobile checkout flow"
+  - type: "image"
+    url: "/images/projects/placeholder-phone.png"
+    alt: "User dashboard interface"
+---
+
+## Project Overview
+
+This project involved a complete redesign of TechStore's e-commerce platform, which serves over 2 million monthly active users. The goal was to increase conversion rates while improving the overall user experience across all devices.
+
+## Challenge
+
+The existing platform had several pain points:
+
+- **High cart abandonment rate** (68%) on mobile devices
+- **Complex checkout flow** with 7+ steps
+- **Poor product discovery** leading to low average order value
+- **Inconsistent design system** across web and mobile apps
+
+## Solution
+
+We implemented a mobile-first redesign strategy focusing on three key areas:
+
+### 1. Streamlined Checkout
+
+Reduced the checkout process from 7 steps to just 3:
+1. Cart review with smart recommendations
+2. Shipping and payment information (single form)
+3. Order confirmation with social proof
+
+### 2. Enhanced Product Discovery
+
+- Implemented AI-powered product recommendations
+- Added "Complete the Look" feature for fashion items
+- Redesigned search with faceted filtering and visual results
+
+### 3. Unified Design System
+
+Created a comprehensive design system in Figma with:
+- 120+ reusable components
+- Consistent spacing and typography scales
+- Dark mode support
+- Accessibility guidelines (WCAG 2.1 AA compliant)
+
+## Results
+
+After launching the redesign, TechStore saw significant improvements:
+
+- **45% reduction** in cart abandonment on mobile
+- **32% increase** in average order value
+- **2.5x faster** page load times
+- **4.8/5** user satisfaction rating
+
+## Technical Implementation
+
+The redesign was built using React with Next.js for optimal performance. We integrated:
+
+```typescript
+// Example: Product recommendation engine integration
+import { useRecommendations } from "@/hooks/useRecommendations";
+
+export function ProductRecommendations({ productId }: Props) {
+  const { recommendations, loading } = useRecommendations(productId, {
+    limit: 6,
+    strategy: "collaborative-filtering",
+  });
+
+  if (loading) return <RecommendationsSkeleton />;
+
+  return (
+    <section className="recommendations">
+      <h2>You might also like</h2>
+      <ProductGrid products={recommendations} />
+    </section>
+  );
+}
+```
+
+## Key Learnings
+
+1. **Mobile-first is essential** - Over 70% of traffic came from mobile devices
+2. **Reduce friction** - Every additional step in checkout decreases conversion by ~15%
+3. **Social proof works** - Showing "X people bought this today" increased CTR by 28%
+4. **Performance matters** - A 1-second delay in page load reduces conversions by 7%
+
+## Credits
+
+- **Product Design**: Štěpán Prokop (Lead), Sarah Johnson
+- **Development**: TechStore Engineering Team
+- **User Research**: Emma Williams
+- **Project Management**: Michael Chen
