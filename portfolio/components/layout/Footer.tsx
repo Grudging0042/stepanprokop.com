@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 
 /**
  * Footer Component with Newsletter Subscription
@@ -82,16 +83,16 @@ export function Footer() {
   return (
     <footer className="w-full bg-[var(--theme-background-primary)] py-8 px-6 sm:py-12">
       <div className="mx-auto w-full max-w-[644px]">
-        <div className="flex flex-col gap-4 rounded-lg border border-solid border-[var(--component-positive-stroke,#6b6b6b)] bg-[var(--component-positive-fill,#4d4d4d)] p-6">
+        <div className="flex flex-col gap-4 rounded-md border border-solid border-[var(--component-positive-stroke)] bg-[var(--component-positive-fill)] p-6">
           {/* Text Content */}
           <div className="flex flex-col gap-1">
             {/* Heading */}
-            <h2 className="font-['Inter',sans-serif] text-base font-normal leading-6 tracking-[-0.01em] text-[color:var(--text-positive-primary,#e6e6e6)]">
+            <h2 className="text-headline-3 text-[color:var(--text-positive-primary)]">
               Get the Latest Updates
             </h2>
 
             {/* Description */}
-            <p className="font-['Inter',sans-serif] text-base font-normal leading-6 tracking-[-0.01em] text-[color:var(--text-positive-secondary,#d4d4d4)]">
+            <p className="text-body-2 text-[color:var(--text-positive-secondary)]">
               Receive occasional drops of new designs, components, and random resources. No spam, just the good stuff.
             </p>
           </div>
@@ -114,12 +115,13 @@ export function Footer() {
                 aria-label="Email address"
                 aria-invalid={isValid === false}
                 data-invalid={isValid === false}
-                className="h-11 w-full rounded-md border border-solid border-[var(--button-default-border,#e6e6e6)] bg-[var(--button-default-fill,#f5f5f5)] px-4 font-['Inter',sans-serif] text-base font-normal leading-6 tracking-[-0.01em] text-[color:var(--button-default-content,#2a2a2a)] placeholder:text-[color:var(--text-positive-secondary,#6b6b6b)] focus:outline-none focus:ring-2 focus:ring-[var(--button-default-border,#e6e6e6)] focus:ring-offset-0 aria-invalid:border-red-500 aria-invalid:focus:ring-red-500"
+                className="h-9 w-full rounded-md border border-solid border-[var(--button-default-border)] bg-[var(--button-default-fill)] px-4 text-body-2 text-[color:var(--button-default-content)] placeholder:text-[color:var(--text-positive-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--button-default-border)] focus:ring-offset-0 aria-invalid:border-red-500 aria-invalid:focus:ring-red-500"
               />
               {message && (
-                <span 
-                  className={`text-xs leading-tight ${isValid === false ? 'text-red-400' : 'text-green-400'}`}
+                <span
+                  className="text-body-4 text-[color:var(--text-secondary)]"
                   role="alert"
+                  data-validation-state={isValid === false ? "error" : "success"}
                 >
                   {message}
                 </span>
@@ -130,7 +132,7 @@ export function Footer() {
             <Button
               type="submit"
               variant="default"
-              className="h-11 shrink-0 gap-2"
+              className="shrink-0"
             >
               <svg
                 width="16"
